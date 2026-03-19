@@ -1,0 +1,114 @@
+.url-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.url-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.url-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.url-info { flex: 1; min-width: 0; }
+
+.short-url-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.short-url {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  transition: opacity 0.2s;
+}
+
+.short-url:hover { opacity: 0.8; }
+
+.badge-custom {
+  font-size: 0.65rem;
+  background: rgba(108, 99, 255, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.original-url {
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clicks-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  min-width: 54px;
+}
+
+.clicks-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent3);
+}
+
+.clicks-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.url-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 0.9rem;
+}
+
+.url-date {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.url-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-copy, .btn-qr, .btn-del {
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text-muted);
+}
+
+.btn-copy:hover { color: var(--accent3); border-color: var(--accent3); }
+.btn-copy.copied { color: var(--accent3); border-color: var(--accent3); }
+.btn-qr:hover { color: var(--accent); border-color: var(--accent); }
+.btn-del:hover { color: var(--danger); border-color: var(--danger); }
