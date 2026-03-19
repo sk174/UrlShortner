@@ -10,10 +10,20 @@ const app = express();
 connectDB();
 
 // Middleware
+// app.use(cors({
+//   origin: process.env.CLIENT_URL || 'http://localhost:3000',
+//   credentials: true
+// }));
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    'https://url-shortner-t36e.vercel.app',
+    process.env.CLIENT_URL
+  ],
   credentials: true
 }));
+
 app.use(express.json());
 
 // API Routes
